@@ -1,10 +1,5 @@
 # rust-network-monitor
-A Network Traffic Monitor built in Rust (work in progress) for learning purposes
-
-Network Monitoring Tool in Rust
-
-Network monitoring is crucial for understanding and optimizing network behavior. Using Rust, we've developed a network monitoring tool that offers both safety and performance. 
-This document provides an overview and instructions on how to use this tool.
+A Network Traffic Monitor built in Rust (work in progress) for learning purposes. ]
 
 You can read the complete implementation guide here: 
 
