@@ -13,10 +13,9 @@ Overview
 The tool captures packets, analyzes them, and offers various features like filtering, alerting, and flow analysis. It's built using Rust, leveraging libraries such as pcap, pnet, and notify-rust.
 Features
 
-    Packet Capturing: Capture and analyze packets on any network interface.
-    Flow Analysis: Understand broader network traffic patterns.
-    Alerts: Receive notifications based on specific network events.
-    Filters: Capture specific types of traffic based on predefined criteria.
+Packet Capturing: Capture and analyze packets on any network interface.
+Flow Analysis: Understand broader network traffic patterns.
+Alerts: Receive notifications based on specific network events.
 
 Getting Started
 
@@ -42,24 +41,27 @@ Build the project:
 
 The executable will be available in the target/release directory.
 
+Note: You might need root access to run the application properly. If permission denied errors occur, grant access by doing:
+
+      sudo setcap cap_net_raw=eip ./target/debug/{your_project_name}
+
 Usage
 
 - Run the tool:
 
-      ./target/release/network-monitoring-rust
+      ./target/release/{your_project_name}
 
-By default, it will capture packets on the eth0 interface. You can configure various aspects, such as the network interface, filters, and alert criteria, by modifying the configuration in the main application.
+- Optional configurations:
 
-Advanced Features
+  Use the config.toml within the root directory, as shown below, to customize a few parameters:
 
-Flow Analysis
-
-Group packets into flows based on source/destination IPs, ports, and protocol, and maintain statistics like the number of packets and bytes for each flow.
-
-Alerts
-
-Get alerted when specific network conditions are met. This can be an essential source of information during network threats or malfunctions.
-Filters
-
-Apply filters to capture only specific types of traffic. This helps in narrowing down the traffic to be analyzed, especially in busy networks.
+      [general]
+      mode = "summary" # or "detailed"
+  
+      [alert]
+      ip = "10.0.0.0"
+     
+  Mode: defines the level of logging shown in the console
+  Alert: defines an alert to be shown whenever a packet arrives from a given IP address
+  
 
