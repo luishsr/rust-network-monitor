@@ -1,7 +1,7 @@
 # rust-network-monitor
 A Network Traffic Monitor built in Rust (work in progress) for learning purposes. ]
 
-You can read the complete implementation guide here: 
+You can read the complete implementation guide here: https://medium.com/dev-genius/implementing-a-network-traffic-analyzer-in-rust-50a772bb6564
 
 Overview
 
